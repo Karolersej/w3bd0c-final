@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAA - Valgfagsguiden</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<!-- POPUP BY DANIEL -->
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content1">
+      <h1>VELKOMMEN TIL VALGFAGSGUIDEN 2022</h1>
+      <p> Dette er din guide til at vælge det rette valgfag. <br><br>
+        På siden her møder du Yessica, som er i tvivl om, hvilket valgfag hun skal vælge.
+        Yessicas tre venner har allerede taget valget og vil derfor hjælpe hende ved at fortælle om, 
+        hvorfor de har valgt deres linje. 
+        <br> <br>
+        <b>Husk at slå lyden til! 🔊</b>
+        <br> <br> 
+    </p>
+        <div class="close-btn" onclick="PopUp()">&times;</div>
+    </div>
+      </div>
+
+
+    <nav>
+        <div class="overskrift">
+            <h1>Valgsfagsguiden 2022</h1>
+            <p>Tag med Yessica på en virtuel rundtur med de 3 studerende</p>
+        </div>
+    </nav>
+
+<!-- MAIN TAG-->
+<main>
+        <img class="spidsen" src="./images/spidsen.png" alt="anan">
+        
+    
+        <img onclick="afspilLyd(yessica_lyd);" src="images/yessic.png" alt="person" class="yessica"> 
+    
+        
+        <a href="frontend.html">
+            <img onmouseover="afspilLyd(daniel_lyd);" onmouseout="resetLyd(daniel_lyd);" src="images/daniel.png" alt="person" class="daniel">
+        </a>
+     
+        <a href="content.html">
+            <img onmouseover="afspilLyd(karol_lyd);" onmouseout="resetLyd(karol_lyd);" src="images/karol.png" alt="person" class="karol">
+        </a>
+        
+        <a href="ux.html">
+            <img onmouseover="afspilLyd(emma_lyd);" onmouseout="resetLyd(emma_lyd);" src="images/emma.png" alt="person" class="emma">
+        </a>
+</main>
+
+
+
+
+<audio src="/sounds/yessica.mp3" class="lyd1"></audio>
+<audio src="/sounds/daniel.mp3" class="lyd2"></audio>
+<audio src="/sounds/karol.mp3" class="lyd3"></audio>
+<audio src="/sounds/emma.mp3" class="lyd4"></audio>
+
+
+<script src="index.js"></script>
+
+</body>
+</html>

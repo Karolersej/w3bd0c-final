@@ -1,0 +1,128 @@
+@import url(//db.onlinewebfonts.com/c/daa995120ab25eeb0043443a6e731f69?family=DIN+2014+Web+Demi);
+
+
+
+nav {
+    text-align: center;
+    background-color: #F3F4F7;
+    padding: 30px 10px;
+}
+
+.overskrift {
+    text-align: center;
+}
+
+.overskrift h1 {
+margin-bottom: -10px;
+margin-top: -2px;
+font-size: 40px;
+padding-top: 20px;
+text-transform: uppercase;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: din-2014,-apple-system,BlinkMacSystemFont,Segoe UI,europa,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+main {
+     display: flex;
+     justify-content: center; 
+
+ }
+
+.spidsen {
+    padding-top: 1rem;
+    z-index: 1;
+    text-align: center;
+    height: 40rem;
+    width: auto;
+}
+
+.daniel, .karol, .emma {
+    position: absolute;
+    height: 300px;
+    z-index: 1;
+}
+
+
+
+.emma {
+    bottom: 40px;
+    left: 70rem;
+}
+
+.daniel {
+    bottom: 40px;
+    left: 40rem;
+}
+
+.karol {
+    bottom: 30px;
+    left: 60rem;
+}
+
+.yessica {
+    position: absolute;
+    height: 650px;
+    z-index: 1;
+    left: 200px;
+    bottom: 0;
+
+}
+
+.lol {
+    color:white;
+}
+
+/* -------DANIEL POPUP-------- */
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 2;
+    display: block;
+}
+.popup .content1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    background: #fff;
+    width: 450px;
+    height: 350px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.popup .close-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content1{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+
+}

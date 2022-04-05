@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Creator</title>
+  <link rel="stylesheet" href="content.css">
+</head>
+<body>
+
+
+<section class="main">
+  
+ <div class="bottomdiv hide" id="footer"> 
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Klik her for mere information!</button>
+  
+  <div id="myDropdown" class="dropdown-content">
+    <button id="knap" onclick="setCurTime(); gem();" type="button"><p> Hvad handler content creator om?</p></button><br> 
+<button id="knap1" onclick="setCurTime1(); gem1()" type="button"><p> Er linjen vigtig for din fremtid?</p></button><br> 
+<button id="knap2" onclick="setCurTime2(); gem2()" type="button"><p> Hvorfor har du valgt content creator?</p></button><br> 
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="arrow-box">
+  <div class="arrow-round" onclick="setCurTime3(); gem3();"></div>
+</div>
+
+<div class="hjem-knap">
+  <a href="index.html">
+  <img src="./images/hjem-knap.png">
+ </a>
+</div>
+
+<video id="myVideo" poster="./images/thumbnail-content.png" controls>  
+  <source src="./images/content-video.mp4" type="video/mp4">
+</video>
+<button id="press" onclick="setTimeout(test, 600)"></button>
+
+<div class="scrolldown">
+  <div class="chevrons">
+    <div class="chevrondown"></div>
+    <div class="chevrondown"></div>
+  </div>
+</div>
+</section>
+
+
+<br><br><br><br><br><br>
+
+
+<section class="about" id="about">
+
+  <h1 class="heading"> <span>Content</span> Creation</h1>
+
+  <div class="row">
+
+    <div class="billeder">
+      <div class="image" id="billed-afstand">
+          <img src="./images/content1.png">
+        </div>
+        <div class="image">
+          <img src="./images/content2.png">
+        </div>
+    </div>
+
+    <div class="content">
+      <h4>Viden</h4>  
+      <p>Du får viden om: <br> 
+        • erhvervet og fagområdets praksis og centrale anvendt teori og metode om digitalt indhold og medieplatforme, herunder teknologier til design og programmering af digitale brugeroplevelser samt digitalt indhold <br><br>
+        • forståelse for praksis, central anvendt teori og metode, samt kan forstå erhvervets anvendelse af teori og metode til design og programmering af digitalt indhold samt for projektøkonomi og multimediedesignerens rolle i værdikæden. <br></p>
+      <h4>Færdigheder</h4>
+      <p>Du udvikler færdigheder til at: <br>
+        • anvende fagområdets centrale metoder og redskaber til design og programmering af digitalt indhold, samt kan anvende de færdigheder, der knytter sig til beskæftigelse inden for erhvervet, herunder brugercentreret metode til produktion samt evaluering af produktionen <br><br>
+        • vurdere praksisnære problemstillinger samt opstille og vælge løsningsmodeller i forhold til design og programmering af digitalt indhold <br><br>
+        • formidle praksisnære problemstillinger og løsningsmuligheder inden for digitalt indhold til samarbejdspartnere og brugere. <br></p>
+      <h4>Kompetencer</h4>
+      <p>Du lærer at: <br>
+        • varetage udviklingsorienterede situationer i relation til produktion af digitalt indhold <br><br>
+        • deltage i fagligt og tværfagligt samarbejde om produktion af digitalt indhold med en professionel tilgang <br><br>
+        • i en struktureret sammenhæng tilegne sig ny viden, færdigheder og kompetencer inden for design og produktion af digitalt indhold i relation til erhvervet. <br></p>
+        
+        
+    </div>
+  </div>
+</section>
+
+<br><br><br><br><br><br>
+<h1 class="heading"> <span>Semester</span>forløb</h1>
+<section class="grafik">
+  <div class="video-wrap">
+    <video id="grafik-video" autoplay muted >
+      <source src="./images/content-grafik.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+
+<script>
+
+
+
+document.getElementById('press').addEventListener('click', function(){
+document.getElementById('myVideo').play();
+document.getElementById('press').style.display = 'none';
+});
+
+
+function test(){
+        document.getElementById("footer").classList.remove('hide');
+       }
+
+       
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+var vid = document.getElementById("myVideo");
+vid.onplay = function nummer1() {
+  setTimeout(()=>{
+    vid.pause()
+  }, 60000)
+}
+
+function gem() {
+  document.getElementById("knap").classList.add('hide');
+}
+function gem1() {
+  document.getElementById("knap1").classList.add('hide');
+}
+
+function gem2() {
+  document.getElementById("knap2").classList.add('hide');
+}
+function gem3() {
+  document.getElementById("knap").classList.remove('hide');
+  document.getElementById("knap1").classList.remove('hide');
+  document.getElementById("knap2").classList.remove('hide');
+}
+
+
+function setCurTime() { 
+  vid.currentTime=67;
+  document.getElementById('myVideo').play();
+  setTimeout(()=>{
+    vid.pause()
+  },28000)  
+}
+
+function setCurTime1() { 
+  vid.currentTime=96;
+  document.getElementById('myVideo').play();
+  setTimeout(()=>{
+    vid.pause()
+  },30000)
+}
+
+function setCurTime2() { 
+  vid.currentTime=135;  
+  document.getElementById('myVideo').play();
+  setTimeout(()=>{
+    vid.pause() 
+  },580000)
+}
+
+function setCurTime3() { 
+  vid.currentTime=0;
+  document.getElementById('myVideo').play();
+  vid.onplay = function() {
+  setTimeout(()=>{
+    vid.pause()
+  },60000)  
+}
+  
+} 
+
+
+window.addEventListener('scroll', videoScroll);
+
+function videoScroll() {
+
+  if ( document.querySelectorAll('video[autoplay]').length > 0) {
+    var windowHeight = window.innerHeight,
+        videoEl = document.querySelectorAll('video[autoplay]');
+ 
+
+    for (var i = 0; i < videoEl.length; i++) {
+
+      var thisVideoEl = videoEl[i],
+          videoHeight = thisVideoEl.clientHeight,
+          videoClientRect = thisVideoEl.getBoundingClientRect().top;
+
+      if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
+        thisVideoEl.play();
+      } else {
+        thisVideoEl.pause();
+      }
+
+    }
+  }
+
+}
+</script> 
+
+</body> 
+</html>
